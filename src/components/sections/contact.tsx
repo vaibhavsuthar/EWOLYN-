@@ -21,7 +21,7 @@ export function Contact() {
               className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
             >
               <Phone className="w-5 h-5 text-accent" />
-              <span>Call us: 77779 41611</span>
+              <span>Call us: +91 77779 41611</span>
             </a>
             <a
               href="mailto:info.evvolyn@gmail.com"
@@ -32,7 +32,7 @@ export function Contact() {
             </a>
           </div>
           <Button asChild size="lg" className="rounded-full font-bold shadow-lg transition-transform hover:scale-105">
-            <a href="tel:7777941611">Call Now for Consultation</a>
+            <a href="tel:7777941611">Call Now for a Consultation</a>
           </Button>
         </div>
       </AnimateOnScroll>

@@ -10,9 +10,9 @@ export function Footer() {
             EVVOLYN
           </div>
         </div>
-        <p className="mb-2">Revolutionising Indian Startups & MSMEs</p>
+        <p className="mb-2">Revolutionizing Indian Startups & MSMEs</p>
         <p className="font-headline text-sm font-bold tracking-wider">
-          EAGLE WOLF LION - तीनो आपके साथ
+          EAGLE WOLF LION - तीनों आपके साथ
         </p>
 
         <div className="mt-8 pt-8 border-t border-background/20 text-sm text-background/60">

@@ -4,16 +4,16 @@ import { MapPin } from 'lucide-react';
 import { AnimateOnScroll } from '../animate-on-scroll';
 
 const gujaratOffices = [
-  'B-304/2 Gopal Palace, Nr. Shiromani Complex, Nehru Nagar, Ahmedabad – 380015',
+  'B-304/2 Gopal Palace, Near Shiromani Complex, Nehru Nagar, Ahmedabad – 380015',
   'Unicus Shyamal, A-1007, Near Shyamal Cross Road, Ahmedabad – 380015',
-  'B-101 Synergy Tower, Nr. Vodafone House, Corporate Road, Ahmedabad – 380015',
+  'B-101 Synergy Tower, Near Vodafone House, Corporate Road, Ahmedabad – 380015',
   'F/20, Mahakali Trade Center, Bhagyoday Cross Road, Kadi',
 ];
 
 const upOffices = [
   'Office No. 76, Green City, Banthra Main Road, Lucknow – 226401',
   '17, The Mall Road, Near Kanpur Railway Station – 208001',
-  '325/3, Paresh Score, Near Hotel Ayodhya, Banares – 221001',
+  '325/3, Paresh Score, Near Hotel Ayodhya, Benares – 221001',
 ];
 
 const otherOffices = [

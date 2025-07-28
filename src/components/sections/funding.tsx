@@ -7,7 +7,7 @@ const governmentSchemes = [
   'Seed Fund Scheme',
   'PMEGP',
   'MSME Loan',
-  'UDYOG MSME LOAN',
+  'UDYOG MSME Loan',
   'MukhyaMantri Schemes',
   'TIDE Program',
   'SIDBI',

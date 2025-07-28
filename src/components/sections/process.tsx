@@ -3,7 +3,7 @@ import { AnimateOnScroll } from '../animate-on-scroll';
 
 const processSteps = [
   { step: 1, title: 'Information Gathering' },
-  { step: 2, title: "Analysts' Deep Dive" },
+  { step: 2, title: "Analysts' Deep-Dive" },
   { step: 3, title: 'Design Phase' },
   { step: 4, title: 'Client Collaboration' },
   { step: 5, title: 'Refinement' },

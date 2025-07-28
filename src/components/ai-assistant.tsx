@@ -85,7 +85,7 @@ export function AiAssistant() {
               <Bot /> AI Assistant
             </DialogTitle>
             <DialogDescription>
-              Ask about startup registration, funding, and more.
+              Ask about startup registrations, funding, and more.
             </DialogDescription>
           </DialogHeader>
 

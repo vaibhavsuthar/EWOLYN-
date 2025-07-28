@@ -8,8 +8,8 @@ import { AnimateOnScroll } from '../animate-on-scroll';
 const founders = [
   { name: 'Jay Rana', title: 'Founder, Evvolyn Group' },
   { name: 'Devraj Desai', title: 'CEO & Co-Founder' },
-  { name: 'JaypalSinh Sisodiya', title: 'Director' },
-  { name: 'KripalSinh Sisodiya', title: 'Executive' },
+  { name: 'Jaypalsinh Sisodiya', title: 'Director' },
+  { name: 'Kripalsinh Sisodiya', title: 'Executive' },
 ];
 
 const stats = [
@@ -55,7 +55,7 @@ export function Hero() {
         </AnimateOnScroll>
         <AnimateOnScroll startVisible delay={200}>
           <p className="text-2xl md:text-3xl font-bold text-accent/90 mb-6 font-headline">
-            EAGLE WOLF LION - तीनो आपके साथ मतलब EVVOLYN आपके साथ!!
+            EAGLE WOLF LION - तीनों आपके साथ मतलब EVVOLYN आपके साथ!!
           </p>
         </AnimateOnScroll>
         <AnimateOnScroll startVisible delay={400}>
