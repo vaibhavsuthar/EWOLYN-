@@ -7,7 +7,6 @@ import { Values } from '@/components/sections/values';
 import { Process } from '@/components/sections/process';
 import { Offices } from '@/components/sections/offices';
 import { Contact } from '@/components/sections/contact';
-import { AiAssistant } from '@/components/ai-assistant';
 import { BlogSection } from '@/components/sections/blog';
 
 export default function Home() {
@@ -23,7 +22,6 @@ export default function Home() {
       <BlogSection />
       <Offices />
       <Contact />
-      <AiAssistant />
     </main>
   );
 }
