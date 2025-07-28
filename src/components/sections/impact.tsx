@@ -23,7 +23,7 @@ export function Impact() {
 
       <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {impactData.map((item, index) => (
-          <AnimateOnScroll key={item.number} delay={200 + index * 100}>
+          <AnimateOnScroll key={`${item.number}-${index}`} delay={200 + index * 100}>
             <Card className="bg-white/10 backdrop-blur-sm border-0 text-center text-white h-full hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
               <CardContent className="p-6 flex flex-col items-center justify-center">
                 <div className="text-4xl font-extrabold text-accent mb-3">
