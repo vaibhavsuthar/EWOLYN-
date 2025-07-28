@@ -1,3 +1,5 @@
+"use client";
+
 import Link from 'next/link';
 import { Boxes, ArrowUp, Phone, CalendarPlus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -138,7 +140,6 @@ export function Footer() {
             </a>
         </Button>
       </div>
-
       <ScrollToTopButton />
     </>
   );
