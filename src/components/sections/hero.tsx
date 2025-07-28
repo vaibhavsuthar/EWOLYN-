@@ -8,8 +8,6 @@ import { AnimateOnScroll } from '../animate-on-scroll';
 const founders = [
   { name: 'Jay Rana', title: 'Founder, Evvolyn Group' },
   { name: 'Devraj Desai', title: 'CEO & Co-Founder' },
-  { name: 'Jaypalsinh Sisodiya', title: 'Director' },
-  { name: 'Kripalsinh Sisodiya', title: 'Executive' },
 ];
 
 const stats = [
@@ -55,7 +53,7 @@ export function Hero() {
         </AnimateOnScroll>
         <AnimateOnScroll startVisible delay={200}>
           <p className="text-2xl md:text-3xl font-bold text-accent/90 mb-6 font-headline">
-            EAGLE WOLF LION - तीनों आपके साथ मतलब EVVOLYN आपके साथ!!
+            EAGLE WOLF LION - The Trio that stands with you, means EVVOLYN stands with you!!
           </p>
         </AnimateOnScroll>
         <AnimateOnScroll startVisible delay={400}>
@@ -70,7 +68,7 @@ export function Hero() {
           </Button>
         </AnimateOnScroll>
 
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 max-w-4xl mx-auto">
           {founders.map((founder, index) => (
             <AnimateOnScroll key={founder.name} delay={800 + index * 100}>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 transition-all duration-300 hover:bg-white/20 hover:-translate-y-1">
