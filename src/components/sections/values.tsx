@@ -15,7 +15,7 @@ const valuesData = [
     description: 'We go beyond the ordinary to provide exceptional support and guidance to our clients.',
   },
   {
-    icon: <Users className="w-12 h-12 text-green-500" />,
+    icon: <Users className="w-12 h-12 text-indian-green" />,
     title: 'Customer-Focused Creativity',
     description: 'We innovate and create solutions tailored to your unique business challenges and opportunities.',
   },

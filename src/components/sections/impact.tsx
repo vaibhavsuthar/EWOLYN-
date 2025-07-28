@@ -13,9 +13,9 @@ const impactData = [
 
 export function Impact() {
   return (
-    <Section id="impact" className="bg-dark-cyan text-white">
+    <Section id="impact" className="bg-primary text-white">
       <AnimateOnScroll>
-        <SectionTitle className="text-white after:bg-soft-orange">Our Impact</SectionTitle>
+        <SectionTitle className="text-white after:bg-accent">Our Impact</SectionTitle>
         <SectionDescription className="text-white/90">
           Driving growth and success for Indian businesses
         </SectionDescription>
@@ -26,7 +26,7 @@ export function Impact() {
           <AnimateOnScroll key={`${item.number}-${index}`} delay={200 + index * 100}>
             <Card className="bg-white/10 backdrop-blur-sm border-0 text-center text-white h-full hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
               <CardContent className="p-6 flex flex-col items-center justify-center">
-                <div className="text-4xl font-extrabold text-soft-orange mb-3">
+                <div className="text-4xl font-extrabold text-accent mb-3">
                   {item.number}
                 </div>
                 <p className="text-white/80">{item.text}</p>

@@ -34,12 +34,12 @@ export function Hero() {
     <section id="home" className="relative bg-light-gray pt-32 pb-24 text-center">
       <div className="container mx-auto px-4 relative z-10">
         <AnimateOnScroll startVisible>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-dark-cyan mb-4">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-primary mb-4">
             Revolutionizing Indian Startups & MSMEs
           </h1>
         </AnimateOnScroll>
         <AnimateOnScroll startVisible delay={200}>
-          <p className="text-2xl md:text-3xl font-bold text-dark-cyan/90 mb-6">
+          <p className="text-2xl md:text-3xl font-bold text-primary/90 mb-6">
             EAGLE WOLF LION - The trio that stands with you, means EVVOLYN stands with you!!
           </p>
         </AnimateOnScroll>
@@ -59,7 +59,7 @@ export function Hero() {
           {founders.map((founder, index) => (
             <AnimateOnScroll key={founder.name} delay={800 + index * 100}>
               <div className="bg-white/50 backdrop-blur-sm rounded-lg p-4 transition-all duration-300 hover:bg-white/80 hover:-translate-y-1 shadow-md">
-                <h4 className="font-bold text-dark-cyan">{founder.name}</h4>
+                <h4 className="font-bold text-primary">{founder.name}</h4>
                 <p className="text-sm text-foreground/70">{founder.title}</p>
               </div>
             </AnimateOnScroll>
@@ -70,7 +70,7 @@ export function Hero() {
           {stats.map((stat, index) => (
             <AnimateOnScroll key={stat.label} delay={1200 + index * 100}>
               <div className="bg-white/50 backdrop-blur-sm rounded-lg p-4 transition-all duration-300 hover:bg-white/80 hover:scale-105 shadow-md">
-                <div className="text-3xl font-bold text-soft-orange">{stat.number}</div>
+                <div className="text-3xl font-bold text-accent">{stat.number}</div>
                 <div className="text-sm text-foreground/70">{stat.label}</div>
               </div>
             </AnimateOnScroll>

@@ -2,10 +2,10 @@ import { Boxes } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="bg-dark-cyan text-white/80">
+    <footer className="bg-primary text-primary-foreground/80">
       <div className="container mx-auto px-4 py-12 text-center">
         <div className="flex items-center justify-center gap-2 mb-4">
-          <Boxes className="h-8 w-8 text-soft-orange" />
+          <Boxes className="h-8 w-8 text-accent" />
           <div className="text-2xl font-bold uppercase text-white">
             EVVOLYN
           </div>
