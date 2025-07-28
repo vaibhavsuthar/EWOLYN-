@@ -10,6 +10,20 @@ interface BlogCardProps {
 }
 
 export function BlogCard({ post }: BlogCardProps) {
+
+  const getImageHint = (slug: string) => {
+    switch (slug) {
+      case 'unlocking-startup-success':
+        return 'Indian startup office';
+      case 'the-power-of-digital-presence':
+        return 'Indian business digital';
+      case 'navigating-the-legal-landscape':
+        return 'Indian legal documents';
+      default:
+        return 'business technology';
+    }
+  }
+
   return (
     <Card className="h-full flex flex-col overflow-hidden shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
       <Link href={`/blog/${post.slug}`} className="block">
@@ -19,6 +33,7 @@ export function BlogCard({ post }: BlogCardProps) {
           width={600}
           height={400}
           className="w-full h-48 object-cover"
+          data-ai-hint={getImageHint(post.slug)}
         />
       </Link>
       <CardHeader>
