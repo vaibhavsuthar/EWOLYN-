@@ -55,26 +55,6 @@ export function Footer() {
               <p className="text-gray-400 mb-6 max-w-xs">
                 Revolutionizing Indian Startups & MSMEs with end-to-end business solutions.
               </p>
-              <div className="flex space-x-4">
-                <a href="#" className="inline-block bg-gray-800 hover:bg-gray-700 transition-colors rounded-lg px-4 py-2">
-                  <div className="flex items-center">
-                    <img src="https://placehold.co/24x24.png" data-ai-hint="google play" alt="Google Play" className="h-6 w-6 mr-2" />
-                    <div>
-                      <p className="text-xs text-gray-300">GET IT ON</p>
-                      <p className="text-sm font-semibold">Google Play</p>
-                    </div>
-                  </div>
-                </a>
-                <a href="#" className="inline-block bg-gray-800 hover:bg-gray-700 transition-colors rounded-lg px-4 py-2">
-                  <div className="flex items-center">
-                    <img src="https://placehold.co/24x24.png" data-ai-hint="apple app store" alt="App Store" className="h-6 w-6 mr-2" />
-                    <div>
-                      <p className="text-xs text-gray-300">Download on the</p>
-                      <p className="text-sm font-semibold">App Store</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
             </div>
 
             {/* Middle Sections */}
