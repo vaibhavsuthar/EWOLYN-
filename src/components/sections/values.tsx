@@ -5,12 +5,12 @@ import { AnimateOnScroll } from '../animate-on-scroll';
 
 const valuesData = [
   {
-    icon: <Handshake className="w-12 h-12 text-red-500" />,
+    icon: <Handshake className="w-12 h-12 text-primary" />,
     title: 'Honesty and Quality',
     description: 'We maintain the highest standards of integrity and deliver quality services that exceed expectations.',
   },
   {
-    icon: <Route className="w-12 h-12 text-primary" />,
+    icon: <Route className="w-12 h-12 text-accent" />,
     title: 'Extra Mile Support',
     description: 'We go beyond the ordinary to provide exceptional support and guidance to our clients.',
   },

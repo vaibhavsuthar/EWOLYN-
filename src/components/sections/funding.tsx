@@ -1,6 +1,6 @@
 import { Section, SectionTitle, SectionDescription } from '../ui/section';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '../ui/card';
-import { Check, Handshake } from 'lucide-react';
+import { CheckCircle2, Handshake } from 'lucide-react';
 import { AnimateOnScroll } from '../animate-on-scroll';
 
 const governmentSchemes = [
@@ -54,7 +54,7 @@ export function Funding() {
                 <ul className="space-y-3">
                 {governmentSchemes.map((item) => (
                     <li key={item} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 mt-1 text-green-500 flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 mt-1 text-green-500 flex-shrink-0" />
                     <span>{item}</span>
                     </li>
                 ))}
@@ -72,7 +72,7 @@ export function Funding() {
                 <ul className="space-y-3">
                 {specializedFunding.map((item) => (
                     <li key={item} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 mt-1 text-green-500 flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 mt-1 text-green-500 flex-shrink-0" />
                     <span>{item}</span>
                     </li>
                 ))}
