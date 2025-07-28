@@ -57,7 +57,7 @@ export function Services() {
               <ul className="space-y-3">
                 {registrationServices.map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 mt-1 text-indian-green flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 mt-1 text-primary flex-shrink-0" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -75,7 +75,7 @@ export function Services() {
               <ul className="space-y-3">
                 {certificationServices.map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 mt-1 text-indian-green flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 mt-1 text-primary flex-shrink-0" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -93,7 +93,7 @@ export function Services() {
               <ul className="space-y-3">
                 {marketingServices.map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 mt-1 text-indian-green flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 mt-1 text-primary flex-shrink-0" />
                     <span>{item}</span>
                   </li>
                 ))}

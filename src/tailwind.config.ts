@@ -12,9 +12,6 @@ const config: Config = {
         'dark-cyan': '#307B96',
         'light-gray': '#F0F4F7',
         'soft-orange': '#E59554',
-        'indian-saffron': '#FF9933',
-        'indian-green': '#138808',
-        'indian-navy': '#000080',
       },
       fontFamily: {
         sans: ['var(--font-pt-sans)', 'sans-serif'],
