@@ -8,23 +8,25 @@ import { cn } from '@/lib/utils';
 import Link from 'next/link';
 
 const navLinks = [
-  { href: '#home', label: 'Home' },
-  { href: '#services', label: 'Services' },
-  { href: '#partners', label: 'Partners' },
-  { href: '#funding', label: 'Funding' },
-  { href: '#impact', label: 'Impact' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/', label: 'Home' },
+  { href: '/#services', label: 'Services' },
+  { href: '/#partners', label: 'Partners' },
+  { href: '/#funding', label: 'Funding' },
+  { href: '/#impact', label: 'Impact' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/#contact', label: 'Contact' },
 ];
 
 export function MainNav() {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (href.startsWith('#')) {
+    if (href.startsWith('/#')) {
       e.preventDefault();
-      const targetElement = document.querySelector(href);
+      const targetId = href.substring(2);
+      const targetElement = document.getElementById(targetId);
       if (targetElement) {
-        const offsetTop = (targetElement as HTMLElement).offsetTop;
+        const offsetTop = targetElement.offsetTop;
         window.scrollTo({
           top: offsetTop - 80, // Adjust for fixed header height
           behavior: 'smooth',
@@ -37,14 +39,14 @@ export function MainNav() {
   const NavLinksComponent = ({ className }: { className?: string }) => (
     <nav className={cn('flex items-center gap-6', className)}>
       {navLinks.map(({ href, label }) => (
-        <a
+        <Link
           key={href}
           href={href}
           onClick={(e) => handleLinkClick(e, href)}
           className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
         >
           {label}
-        </a>
+        </Link>
       ))}
     </nav>
   );
@@ -54,7 +56,7 @@ export function MainNav() {
       <div className="hidden md:flex items-center gap-4">
         <NavLinksComponent />
         <Button asChild className="rounded-full font-bold shadow-lg transition-transform hover:scale-105">
-          <a href="#contact" onClick={(e) => handleLinkClick(e, '#contact')}>Get Consultation</a>
+          <Link href="/#contact" onClick={(e) => handleLinkClick(e, '/#contact')}>Get Consultation</Link>
         </Button>
       </div>
       <div className="md:hidden">
@@ -73,17 +75,17 @@ export function MainNav() {
               </div>
               <nav className="flex flex-col items-center justify-center flex-grow gap-8">
                 {navLinks.map(({ href, label }) => (
-                  <a
+                  <Link
                     key={href}
                     href={href}
                     onClick={(e) => handleLinkClick(e, href)}
                     className="text-2xl font-semibold text-foreground hover:text-primary transition-colors"
                   >
                     {label}
-                  </a>
+                  </Link>
                 ))}
                 <Button asChild size="lg" className="mt-8 rounded-full font-bold text-lg">
-                  <a href="#contact" onClick={(e) => handleLinkClick(e, '#contact')}>Get Consultation</a>
+                  <Link href="/#contact" onClick={(e) => handleLinkClick(e, '/#contact')}>Get Consultation</Link>
                 </Button>
               </nav>
             </div>

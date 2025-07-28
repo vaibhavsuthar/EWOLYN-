@@ -8,6 +8,7 @@ import { Process } from '@/components/sections/process';
 import { Offices } from '@/components/sections/offices';
 import { Contact } from '@/components/sections/contact';
 import { AiAssistant } from '@/components/ai-assistant';
+import { BlogSection } from '@/components/sections/blog';
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Impact />
       <Values />
       <Process />
+      <BlogSection />
       <Offices />
       <Contact />
       <AiAssistant />
