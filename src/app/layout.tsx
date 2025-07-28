@@ -4,6 +4,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { PT_Sans } from 'next/font/google';
+import { AnimatedBackground } from '@/components/animated-background';
 
 const ptSans = PT_Sans({
   subsets: ['latin'],
@@ -25,10 +26,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${ptSans.variable} font-sans bg-light-gray`}>
-        <Header />
-        {children}
-        <Footer />
-        <Toaster />
+        <AnimatedBackground />
+        <div className="relative z-10">
+          <Header />
+          {children}
+          <Footer />
+          <Toaster />
+        </div>
       </body>
     </html>
   );
