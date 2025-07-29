@@ -13,7 +13,7 @@ export function BlogSection() {
       <AnimateOnScroll>
         <SectionTitle>From Our Blog</SectionTitle>
         <SectionDescription>
-          Insights, updates, and stories from the Evvolyn team.
+          हमारे ब्लॉग से सीधे आपके लिए, व्यापार की दुनिया से नवीनतम जानकारी और प्रेरणा।
         </SectionDescription>
       </AnimateOnScroll>
 
