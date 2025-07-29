@@ -32,7 +32,6 @@ export function Hero() {
         loop
         muted
         playsInline
-        poster="https://placehold.co/1920x1080.png"
         className="absolute top-0 left-0 w-full h-full object-cover -z-10"
       >
         <source src="/hero-background.mp4" type="video/mp4" />
