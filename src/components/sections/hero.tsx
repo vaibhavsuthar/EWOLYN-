@@ -26,15 +26,16 @@ export function Hero() {
   };
   
   return (
-    <section id="home" className="relative pt-32 pb-24 text-center overflow-hidden">
+    <section id="home" className="relative pt-32 pb-24 text-center overflow-hidden h-screen flex flex-col justify-center">
       <video
         autoPlay
         loop
         muted
         playsInline
+        poster="https://placehold.co/1920x1080.png"
         className="absolute top-0 left-0 w-full h-full object-cover -z-10"
       >
-        <source src="/123.mp4" type="video/mp4" />
+        <source src="/hero-background.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="absolute top-0 left-0 w-full h-full bg-black/50 -z-10"></div>
