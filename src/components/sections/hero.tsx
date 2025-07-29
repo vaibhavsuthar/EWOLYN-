@@ -31,20 +31,33 @@ export function Hero() {
   };
   
   return (
-    <section id="home" className="relative bg-light-gray pt-32 pb-24 text-center">
+    <section id="home" className="relative pt-32 pb-24 text-center overflow-hidden">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+      >
+        {/* Replace with your video file */}
+        <source src="https://videos.pexels.com/video-files/3254013/3254013-hd_1920_1080_25fps.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className="absolute top-0 left-0 w-full h-full bg-black/50 -z-10"></div>
+
       <div className="container mx-auto px-4 relative z-10">
         <AnimateOnScroll startVisible>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-primary mb-4">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4">
             Revolutionizing Indian Startups & MSMEs
           </h1>
         </AnimateOnScroll>
         <AnimateOnScroll startVisible delay={200}>
-          <p className="text-2xl md:text-3xl font-bold text-primary/90 mb-6">
+          <p className="text-2xl md:text-3xl font-bold text-white/90 mb-6">
             EAGLE WOLF LION - The trio that stands with you, means EVVOLYN stands with you!!
           </p>
         </AnimateOnScroll>
         <AnimateOnScroll startVisible delay={400}>
-          <p className="max-w-3xl mx-auto text-lg md:text-xl mb-8 text-foreground/80">
+          <p className="max-w-3xl mx-auto text-lg md:text-xl mb-8 text-white/80">
             Comprehensive support for startups and MSMEs with registration,
             certification, funding, and business growth services.
           </p>
@@ -58,9 +71,9 @@ export function Hero() {
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 max-w-4xl mx-auto">
           {founders.map((founder, index) => (
             <AnimateOnScroll key={founder.name} delay={800 + index * 100}>
-              <div className="bg-white/50 backdrop-blur-sm rounded-lg p-4 transition-all duration-300 hover:bg-white/80 hover:-translate-y-1 shadow-md">
-                <h4 className="font-bold text-primary">{founder.name}</h4>
-                <p className="text-sm text-foreground/70">{founder.title}</p>
+              <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 transition-all duration-300 hover:bg-white/30 hover:-translate-y-1 shadow-md text-white">
+                <h4 className="font-bold text-white">{founder.name}</h4>
+                <p className="text-sm text-white/80">{founder.title}</p>
               </div>
             </AnimateOnScroll>
           ))}
@@ -69,9 +82,9 @@ export function Hero() {
         <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto">
           {stats.map((stat, index) => (
             <AnimateOnScroll key={stat.label} delay={1200 + index * 100}>
-              <div className="bg-white/50 backdrop-blur-sm rounded-lg p-4 transition-all duration-300 hover:bg-white/80 hover:scale-105 shadow-md">
+              <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 transition-all duration-300 hover:bg-white/30 hover:scale-105 shadow-md">
                 <div className="text-3xl font-bold text-accent">{stat.number}</div>
-                <div className="text-sm text-foreground/70">{stat.label}</div>
+                <div className="text-sm text-white/80">{stat.label}</div>
               </div>
             </AnimateOnScroll>
           ))}
