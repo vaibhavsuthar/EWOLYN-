@@ -34,8 +34,7 @@ export function Hero() {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover -z-10"
       >
-        {/* Replace with your video file */}
-        <source src="https://videos.pexels.com/video-files/3254013/3254013-hd_1920_1080_25fps.mp4" type="video/mp4" />
+        <source src="/hero-background.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="absolute top-0 left-0 w-full h-full bg-black/50 -z-10"></div>
