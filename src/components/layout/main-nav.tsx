@@ -13,7 +13,6 @@ const navLinks = [
   { href: '/#partners', label: 'Partners' },
   { href: '/#funding', label: 'Funding' },
   { href: '/#impact', label: 'Impact' },
-  { href: '/blog', label: 'Blog' },
   { href: '/#contact', label: 'Contact' },
 ];
 
