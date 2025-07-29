@@ -3,11 +3,6 @@
 import { Button } from '../ui/button';
 import { AnimateOnScroll } from '../animate-on-scroll';
 
-const founders = [
-  { name: 'Jay Rana', title: 'Founder, Evvolyn Group' },
-  { name: 'Devraj Desai', title: 'CEO & Co-Founder' },
-];
-
 const stats = [
   { number: '121', label: 'Sales Team' },
   { number: '50', label: 'Admin Team' },
@@ -67,17 +62,6 @@ export function Hero() {
             <a href="#services" onClick={handleScrollToServices}>Explore Our Services</a>
           </Button>
         </AnimateOnScroll>
-
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 max-w-4xl mx-auto">
-          {founders.map((founder, index) => (
-            <AnimateOnScroll key={founder.name} delay={800 + index * 100}>
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 transition-all duration-300 hover:bg-white/30 hover:-translate-y-1 shadow-md text-white">
-                <h4 className="font-bold text-white">{founder.name}</h4>
-                <p className="text-sm text-white/80">{founder.title}</p>
-              </div>
-            </AnimateOnScroll>
-          ))}
-        </div>
 
         <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto">
           {stats.map((stat, index) => (
