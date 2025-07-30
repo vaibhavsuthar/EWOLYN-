@@ -56,7 +56,7 @@ export function Footer() {
             <div className="md:col-span-4">
               <Link href="/" className="flex items-center gap-2 mb-4">
                 <Boxes className="h-10 w-10 text-accent" />
-                <span className="text-2xl font-bold uppercase">EVVOLYN</span>
+                <span className="text-2xl font-bold uppercase">EWOLYN</span>
               </Link>
               <p className="text-gray-400 mb-6 max-w-xs">
                 Revolutionizing Indian Startups & MSMEs with end-to-end business solutions.
@@ -89,7 +89,7 @@ export function Footer() {
             {/* Right Section - Newsletter */}
             <div className="md:col-span-4">
               <h3 className="font-semibold text-lg mb-4">Newsletter</h3>
-              <p className="text-gray-400 mb-4">Enter your email to get the latest updates from Evvolyn.</p>
+              <p className="text-gray-400 mb-4">Enter your email to get the latest updates from Ewolyn.</p>
               <form className="flex">
                 <Input
                   type="email"
@@ -103,9 +103,9 @@ export function Footer() {
 
           <div className="mt-16 pt-8 border-t border-gray-800 text-sm text-gray-500 text-center">
             <p className="mb-2">
-              Disclaimer: Evvolyn is a business consultancy and service provider. We are not a government body. All information provided is for guidance and informational purposes only.
+              Disclaimer: Ewolyn is a business consultancy and service provider. We are not a government body. All information provided is for guidance and informational purposes only.
             </p>
-            <p>&copy; {new Date().getFullYear()} Evvolyn Services Private Limited. All Rights Reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Ewolyn Services Private Limited. All Rights Reserved.</p>
           </div>
         </div>
       </footer>

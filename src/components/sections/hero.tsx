@@ -3,15 +3,6 @@
 import { Button } from '../ui/button';
 import { AnimateOnScroll } from '../animate-on-scroll';
 
-const stats = [
-  { number: '121', label: 'Sales Team' },
-  { number: '50', label: 'Admin Team' },
-  { number: '17', label: 'IT Development' },
-  { number: '15', label: 'Marketing' },
-  { number: '11', label: 'Accounts' },
-  { number: '18', label: 'Legal' },
-];
-
 export function Hero() {
   const handleScrollToServices = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -47,7 +38,7 @@ export function Hero() {
         </AnimateOnScroll>
         <AnimateOnScroll startVisible delay={200}>
           <p className="text-2xl md:text-3xl font-bold text-white/90 mb-6">
-            EAGLE WOLF LION - The trio that stands with you, means EVVOLYN stands with you!!
+            EAGLE WOLF LION - The trio that stands with you, means EWOLYN stands with you!!
           </p>
         </AnimateOnScroll>
         <AnimateOnScroll startVisible delay={400}>
@@ -61,17 +52,6 @@ export function Hero() {
             <a href="#services" onClick={handleScrollToServices}>Explore Our Services</a>
           </Button>
         </AnimateOnScroll>
-
-        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto">
-          {stats.map((stat, index) => (
-            <AnimateOnScroll key={stat.label} delay={1200 + index * 100}>
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 transition-all duration-300 hover:bg-white/30 hover:scale-105 shadow-md">
-                <div className="text-3xl font-bold text-accent">{stat.number}</div>
-                <div className="text-sm text-white/80">{stat.label}</div>
-              </div>
-            </AnimateOnScroll>
-          ))}
-        </div>
       </div>
     </section>
   );

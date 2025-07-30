@@ -9,7 +9,7 @@ export function Header() {
         <Link href="/" className="flex items-center gap-2">
           <Boxes className="h-8 w-8 text-primary" />
           <span className="text-xl font-bold uppercase text-primary">
-            Evvolyn
+            Ewolyn
           </span>
         </Link>
         <MainNav />

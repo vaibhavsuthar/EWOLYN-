@@ -13,8 +13,8 @@ const ptSans = PT_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Evvolyn | Startup & MSME Support Services | Revolutionizing Indian Businesses',
-  description: 'Evvolyn provides comprehensive support for Indian startups & MSMEs - registration, certification, funding, marketing & business advisory services.',
+  title: 'Ewolyn | Startup & MSME Support Services | Revolutionizing Indian Businesses',
+  description: 'Ewolyn provides comprehensive support for Indian startups & MSMEs - registration, certification, funding, marketing & business advisory services.',
   keywords: 'startup support, MSME services, business registration, funding schemes, startup certification, business advisory, India startups',
 };
 

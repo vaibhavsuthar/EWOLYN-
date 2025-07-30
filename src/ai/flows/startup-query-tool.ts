@@ -17,7 +17,7 @@ const StartupQueryToolInputSchema = z.object({
 export type StartupQueryToolInput = z.infer<typeof StartupQueryToolInputSchema>;
 
 const StartupQueryToolOutputSchema = z.object({
-  answer: z.string().describe('The answer to the user query, providing relevant information and suggesting Evvolyn services.'),
+  answer: z.string().describe('The answer to the user query, providing relevant information and suggesting Ewolyn services.'),
 });
 export type StartupQueryToolOutput = z.infer<typeof StartupQueryToolOutputSchema>;
 
@@ -31,7 +31,7 @@ const prompt = ai.definePrompt({
   output: {schema: StartupQueryToolOutputSchema},
   prompt: `You are an AI-powered chatbot designed to answer basic questions about startup registration, funding schemes, and related topics in India.
 
-  Provide concise and informative answers. If the query is about a specific topic where Evvolyn offers services, suggest those services to the user.
+  Provide concise and informative answers. If the query is about a specific topic where Ewolyn offers services, suggest those services to the user.
 
   Query: {{{query}}}
   `,config: {
