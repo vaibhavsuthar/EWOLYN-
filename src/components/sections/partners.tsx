@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 
 const partners = [
   { name: 'Andromeda', color: 'bg-indian-saffron', textColor: 'text-black' },
-  { name: 'Tata Tele Business Services', color: 'bg-background', textColor: 'text-foreground/80' },
+  { name: 'Tata Tele Business Services', color: 'bg-background', textColor: 'text-black' },
   { name: 'MAS Financial', color: 'bg-indian-green', textColor: 'text-black' }
 ];
 
