@@ -1,8 +1,13 @@
 import { Section, SectionTitle, SectionDescription } from '../ui/section';
 import { Card, CardContent } from '../ui/card';
 import { AnimateOnScroll } from '../animate-on-scroll';
+import { cn } from '@/lib/utils';
 
-const partners = ['Andromeda', 'Tata Tele Business Services', 'MAS Financial'];
+const partners = [
+  { name: 'Andromeda', color: 'bg-primary', textColor: 'text-primary-foreground' },
+  { name: 'Tata Tele Business Services', color: 'bg-background', textColor: 'text-foreground/80' },
+  { name: 'MAS Financial', color: 'bg-green-600', textColor: 'text-primary-foreground' }
+];
 
 export function Partners() {
   return (
@@ -17,11 +22,14 @@ export function Partners() {
 
       <div className="mt-12 flex justify-center items-center flex-wrap gap-8">
         {partners.map((partner, index) => (
-          <AnimateOnScroll key={partner} delay={200 + index * 100}>
-            <Card className="w-64 h-32 flex items-center justify-center shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+          <AnimateOnScroll key={partner.name} delay={200 + index * 100}>
+            <Card className={cn(
+                "w-64 h-32 flex items-center justify-center shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300",
+                partner.color
+              )}>
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-center text-foreground/80">
-                  {partner}
+                <h3 className={cn("text-xl font-bold text-center", partner.textColor)}>
+                  {partner.name}
                 </h3>
               </CardContent>
             </Card>
