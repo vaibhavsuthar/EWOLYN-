@@ -4,9 +4,9 @@ import { AnimateOnScroll } from '../animate-on-scroll';
 import { cn } from '@/lib/utils';
 
 const partners = [
-  { name: 'Andromeda', color: 'bg-indian-saffron', textColor: 'text-white' },
+  { name: 'Andromeda', color: 'bg-indian-saffron', textColor: 'text-black' },
   { name: 'Tata Tele Business Services', color: 'bg-background', textColor: 'text-foreground/80' },
-  { name: 'MAS Financial', color: 'bg-indian-green', textColor: 'text-white' }
+  { name: 'MAS Financial', color: 'bg-indian-green', textColor: 'text-black' }
 ];
 
 export function Partners() {
