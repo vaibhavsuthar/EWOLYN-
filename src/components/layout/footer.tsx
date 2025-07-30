@@ -1,10 +1,11 @@
 "use client";
 
 import Link from 'next/link';
-import { Boxes, ArrowUp, Phone, CalendarPlus } from 'lucide-react';
+import { ArrowUp, Phone, CalendarPlus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useEffect, useState } from 'react';
+import { EwolynLogo } from '../ewolyn-logo';
 
 const footerLinks = {
   company: [
@@ -55,8 +56,7 @@ export function Footer() {
             {/* Left Section */}
             <div className="md:col-span-4">
               <Link href="/" className="flex items-center gap-2 mb-4">
-                <Boxes className="h-10 w-10 text-accent" />
-                <span className="text-2xl font-bold uppercase">EWOLYN</span>
+                <EwolynLogo className="h-10 w-auto" />
               </Link>
               <p className="text-gray-400 mb-6 max-w-xs">
                 Revolutionizing Indian Startups & MSMEs with end-to-end business solutions.
