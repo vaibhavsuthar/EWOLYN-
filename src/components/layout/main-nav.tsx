@@ -49,7 +49,7 @@ export function MainNav() {
     setIsOpen(false);
   };
 
-  const handleLaunchClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleLaunchClick = (e: React.MouseEvent) => {
     e.preventDefault();
     setIsRocketAnimating(true);
   };
@@ -87,7 +87,10 @@ export function MainNav() {
        {isRocketAnimating && <AnimatedRocket onAnimationEnd={handleAnimationEnd} />}
       <div className="hidden md:flex items-center gap-4">
         <NavLinksComponent />
-        <Button asChild className="group rounded-full font-bold shadow-lg transition-transform hover:scale-105 bg-black text-white hover:bg-black/90">
+        <Button
+          asChild
+          className="group rounded-full font-bold shadow-lg transition-transform hover:scale-105 bg-black text-white hover:bg-black/90"
+        >
           <Link href="/#contact" onClick={handleLaunchClick} className="relative">
             Get Consultation
           </Link>
