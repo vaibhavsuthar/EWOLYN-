@@ -42,7 +42,7 @@ export function MainNav() {
           key={href}
           href={href}
           onClick={(e) => handleLinkClick(e, href)}
-          className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+          className="text-sm font-medium text-white/80 hover:text-white transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-soft-orange after:transition-all after:duration-300 hover:after:w-full"
         >
           {label}
         </Link>
@@ -54,14 +54,14 @@ export function MainNav() {
     <>
       <div className="hidden md:flex items-center gap-4">
         <NavLinksComponent />
-        <Button asChild className="rounded-full font-bold shadow-lg transition-transform hover:scale-105">
+        <Button asChild className="rounded-full font-bold shadow-lg transition-transform hover:scale-105 bg-soft-orange text-white hover:bg-soft-orange/90">
           <Link href="/#contact" onClick={(e) => handleLinkClick(e, '/#contact')}>Get Consultation</Link>
         </Button>
       </div>
       <div className="md:hidden">
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
-            <Button variant="ghost" size="icon">
+            <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 hover:text-white">
               <Menu className="h-6 w-6" />
             </Button>
           </SheetTrigger>
