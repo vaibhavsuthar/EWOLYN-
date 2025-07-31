@@ -24,11 +24,11 @@ export function Contact() {
               <span>Call us: +91 77779 41611</span>
             </a>
             <a
-              href="mailto:info.evvolyn@gmail.com"
+              href="mailto:info.ewolyn@gmail.com"
               className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
             >
               <Mail className="w-5 h-5 text-accent" />
-              <span>Email: info.evvolyn@gmail.com</span>
+              <span>Email: info.ewolyn@gmail.com</span>
             </a>
           </div>
           <Button asChild size="lg" className="rounded-full font-bold shadow-lg transition-transform hover:scale-105">
