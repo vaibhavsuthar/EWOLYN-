@@ -55,7 +55,7 @@ export function MainNav() {
     <>
       <div className="hidden md:flex items-center gap-4">
         <NavLinksComponent />
-        <Button asChild className="rounded-full font-bold shadow-lg transition-transform hover:scale-105 bg-soft-orange text-white hover:bg-soft-orange/90">
+        <Button asChild className="rounded-full font-bold shadow-lg transition-transform hover:scale-105 bg-dark-cyan text-white hover:bg-dark-cyan/90 animate-pulse">
           <Link href="/#contact" onClick={(e) => handleLinkClick(e, '/#contact')}>Get Consultation</Link>
         </Button>
       </div>
