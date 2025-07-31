@@ -2,6 +2,14 @@ import { Section, SectionTitle, SectionDescription } from '../ui/section';
 import { Card, CardHeader, CardTitle, CardContent } from '../ui/card';
 import { CheckCircle2 } from 'lucide-react';
 import { AnimateOnScroll } from '../animate-on-scroll';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 const registrationServices = [
   'Private Limited Company',
@@ -37,6 +45,29 @@ const marketingServices = [
   'Marketing Consultation',
   'CRM & ERP Solutions',
   'And many more...',
+];
+
+const topServices = [
+  {
+    name: 'Start-up India Certificate',
+    description: 'Fast-track recognition for eligible startups.',
+  },
+  {
+    name: 'Tax Exemption Certificate',
+    description: 'Assistance with Section 80 IAC & 56 exemption.',
+  },
+  {
+    name: 'Company Registration',
+    description: 'Private Ltd., LLP, OPC & more, done hassle-free.',
+  },
+  {
+    name: 'Digital Support',
+    description: 'End-to-end tech solutions for your growing business.',
+  },
+  {
+    name: 'ISO Certification',
+    description: 'Get certified with expert guidance (ISO 9001, 14001, etc.).',
+  },
 ];
 
 export function Services() {
@@ -102,6 +133,32 @@ export function Services() {
           </Card>
         </AnimateOnScroll>
       </div>
+
+      <AnimateOnScroll delay={800}>
+        <div className="mt-16">
+          <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">
+            Top Services
+          </h3>
+          <Card className="shadow-lg">
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="w-[40%] text-base font-semibold text-primary">Service</TableHead>
+                  <TableHead className="text-base font-semibold text-primary">Description</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {topServices.map((service) => (
+                  <TableRow key={service.name}>
+                    <TableCell className="font-medium">{service.name}</TableCell>
+                    <TableCell>{service.description}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </Card>
+        </div>
+      </AnimateOnScroll>
     </Section>
   );
 }
