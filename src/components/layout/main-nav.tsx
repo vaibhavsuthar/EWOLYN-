@@ -4,7 +4,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, X, Rocket } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 
@@ -73,7 +73,8 @@ export function MainNav() {
           key={href}
           href={href}
           onClick={(e) => handleLinkClick(e, href)}
-          className="text-lg font-medium text-white hover:text-soft-orange transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-soft-orange after:transition-all after:duration-300 hover:after:w-full"
+          className="text-lg font-medium hover:text-soft-orange transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-soft-orange after:transition-all after:duration-300 hover:after:w-full"
+          style={{ color: '#0D1320' }}
         >
           {label}
         </Link>
@@ -86,13 +87,9 @@ export function MainNav() {
        {isRocketAnimating && <AnimatedRocket onAnimationEnd={handleAnimationEnd} />}
       <div className="hidden md:flex items-center gap-4">
         <NavLinksComponent />
-        <Button asChild className="group rounded-full font-bold shadow-lg transition-transform hover:scale-105 bg-black text-white hover:bg-black/90 overflow-hidden">
+        <Button asChild className="group rounded-full font-bold shadow-lg transition-transform hover:scale-105 bg-black text-white hover:bg-black/90">
           <Link href="/#contact" onClick={handleLaunchClick} className="relative">
-            <span className="transition-transform duration-300 group-hover:-translate-y-8">Get Consultation</span>
-            <span className="absolute inset-0 flex items-center justify-center transition-transform duration-300 translate-y-8 group-hover:translate-y-0">
-              <Rocket className="mr-2 h-5 w-5" />
-              Launch!
-            </span>
+            Get Consultation
           </Link>
         </Button>
       </div>
