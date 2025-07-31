@@ -1,8 +1,9 @@
+
 import { Section, SectionTitle } from '@/components/ui/section';
 
 export default function RefundPolicy() {
   return (
-    <main className="bg-background pt-24">
+    <main className="bg-light-gray pt-24">
       <Section id="refund-policy" className="py-12 md:py-16">
         <SectionTitle>Refund Policy</SectionTitle>
         <div className="max-w-4xl mx-auto mt-12 prose prose-lg lg:prose-xl text-foreground">
