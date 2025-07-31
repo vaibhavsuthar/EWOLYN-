@@ -43,11 +43,21 @@ const ScrollToTopButton = () => {
 
 export function Footer() {
   const [isClient, setIsClient] = useState(false);
+  const [newsletterEmail, setNewsletterEmail] = useState('');
 
   useEffect(() => {
     setIsClient(true);
   }, []);
   
+  const handleNewsletterSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (newsletterEmail) {
+      const subject = "Newsletter Subscription Request";
+      const body = `Please add me to the newsletter. My email is ${newsletterEmail}`;
+      window.location.href = `mailto:info.ewolyn@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    }
+  };
+
   return (
     <>
       <footer className="bg-gray-900 text-white">
@@ -90,11 +100,14 @@ export function Footer() {
             <div className="md:col-span-4">
               <h3 className="font-semibold text-lg mb-4">Newsletter</h3>
               <p className="text-gray-400 mb-4">Enter your email to get the latest updates from Ewolyn.</p>
-              <form className="flex">
+              <form className="flex" onSubmit={handleNewsletterSubmit}>
                 <Input
                   type="email"
                   placeholder="Your email address"
                   className="bg-gray-800 border-gray-700 text-white rounded-r-none flex-grow"
+                  value={newsletterEmail}
+                  onChange={(e) => setNewsletterEmail(e.target.value)}
+                  required
                 />
                 <Button type="submit" className="bg-primary hover:bg-primary/90 rounded-l-none">Subscribe</Button>
               </form>
