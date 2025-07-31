@@ -108,9 +108,6 @@ export function Footer() {
                 />
                 <Button type="submit" className="bg-primary hover:bg-primary/90 rounded-l-none">Subscribe</Button>
               </form>
-              <p className="text-xs text-gray-500 mt-2">
-                Clicking "Subscribe" will open your default email app to send the subscription request.
-              </p>
             </div>
           </div>
 
