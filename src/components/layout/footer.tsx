@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-import { ArrowUp, Phone, CalendarPlus } from 'lucide-react';
+import { ArrowUp, Phone, CalendarPlus, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useEffect, useState } from 'react';
@@ -70,6 +70,15 @@ export function Footer() {
               <p className="text-gray-400 mb-6 max-w-xs">
                 Revolutionizing Indian Startups & MSMEs with end-to-end business solutions.
               </p>
+              <a
+                href="https://www.instagram.com/ewolyngroup?igsh=NTc4MTIwNjQ2YQ=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Ewolyn Instagram Profile"
+              >
+                <Instagram className="h-6 w-6" />
+              </a>
             </div>
 
             {/* Middle Sections */}
