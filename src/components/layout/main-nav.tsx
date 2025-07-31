@@ -43,7 +43,7 @@ export function MainNav() {
           key={href}
           href={href}
           onClick={(e) => handleLinkClick(e, href)}
-          className="text-sm font-medium text-soft-orange hover:text-white transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+          className="text-sm font-medium text-black hover:text-white transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
         >
           {label}
         </Link>
