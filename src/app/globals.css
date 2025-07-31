@@ -61,11 +61,11 @@
 @layer utilities {
   @keyframes rocket-fly {
     0% {
-      transform: translate(0, 0) rotate(135deg);
+      transform: translateY(0) rotate(90deg);
       opacity: 1;
     }
     100% {
-      transform: translate(-100vw, 100vh) rotate(135deg);
+      transform: translateY(100vh) rotate(90deg);
       opacity: 0;
     }
   }
