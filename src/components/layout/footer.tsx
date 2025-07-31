@@ -14,7 +14,7 @@ const footerLinks = {
     { href: '/#contact', label: 'Contact' },
   ],
   support: [
-    { href: '#', label: 'Case Studies' },
+    { href: '/privacy-policy', label: 'Privacy Policy' },
     { href: '/terms-and-conditions', label: 'Terms & Conditions' },
   ],
 };
@@ -52,6 +52,10 @@ export function Footer() {
     const mailtoLink = `mailto:info.ewolyn@gmail.com?subject=Newsletter Subscription&body=Please add me to the newsletter list. My email is: ${newsletterEmail}`;
     window.location.href = mailtoLink;
   };
+
+  if (!isClient) {
+    return null;
+  }
 
   return (
     <>
@@ -118,26 +122,22 @@ export function Footer() {
         </div>
       </footer>
 
-      {isClient && (
-        <>
-          <div className="fixed bottom-6 left-6 z-40 hidden md:block">
-            <Button asChild className="rounded-full font-bold shadow-2xl h-14" size="lg">
-              <a href="#contact">
-                <CalendarPlus className="mr-2 h-5 w-5"/>
-                Book Consultation
-              </a>
-            </Button>
-          </div>
-          <div className="fixed bottom-6 right-24 z-40 hidden md:block">
-            <Button asChild size="icon" className="rounded-full h-14 w-14 shadow-2xl">
-                <a href="tel:7777941611">
-                    <Phone className="h-6 w-6"/>
-                </a>
-            </Button>
-          </div>
-          <ScrollToTopButton />
-        </>
-      )}
+      <div className="fixed bottom-6 left-6 z-40 hidden md:block">
+        <Button asChild className="rounded-full font-bold shadow-2xl h-14" size="lg">
+          <a href="#contact">
+            <CalendarPlus className="mr-2 h-5 w-5"/>
+            Book Consultation
+          </a>
+        </Button>
+      </div>
+      <div className="fixed bottom-6 right-24 z-40 hidden md:block">
+        <Button asChild size="icon" className="rounded-full h-14 w-14 shadow-2xl">
+            <a href="tel:7777941611">
+                <Phone className="h-6 w-6"/>
+            </a>
+        </Button>
+      </div>
+      <ScrollToTopButton />
     </>
   );
 }
