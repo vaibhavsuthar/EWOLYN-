@@ -2,14 +2,6 @@ import { Section, SectionTitle, SectionDescription } from '../ui/section';
 import { Card, CardHeader, CardTitle, CardContent } from '../ui/card';
 import { CheckCircle2 } from 'lucide-react';
 import { AnimateOnScroll } from '../animate-on-scroll';
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
 
 const registrationServices = [
   'Private Limited Company',
@@ -139,23 +131,23 @@ export function Services() {
           <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">
             Top Services
           </h3>
-          <Card className="shadow-lg">
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHead className="w-[40%] text-base font-semibold text-primary">Service</TableHead>
-                  <TableHead className="text-base font-semibold text-primary">Description</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {topServices.map((service) => (
-                  <TableRow key={service.name}>
-                    <TableCell className="font-medium">{service.name}</TableCell>
-                    <TableCell>{service.description}</TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
+          <Card className="shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 w-full max-w-3xl mx-auto">
+            <CardHeader className="bg-primary text-primary-foreground">
+                <CardTitle>Our Most Popular Services</CardTitle>
+            </CardHeader>
+            <CardContent className="pt-6">
+                <ul className="space-y-4">
+                    {topServices.map((service) => (
+                        <li key={service.name} className="flex items-start gap-4">
+                            <CheckCircle2 className="w-6 h-6 mt-1 text-primary flex-shrink-0" />
+                            <div>
+                                <h4 className="font-semibold">{service.name}</h4>
+                                <p className="text-muted-foreground">{service.description}</p>
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+            </CardContent>
           </Card>
         </div>
       </AnimateOnScroll>
