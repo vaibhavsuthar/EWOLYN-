@@ -1,3 +1,4 @@
+
 import { Hero } from '@/components/sections/hero';
 import { Partners } from '@/components/sections/partners';
 import { Services } from '@/components/sections/services';
@@ -7,6 +8,7 @@ import { Values } from '@/components/sections/values';
 import { Process } from '@/components/sections/process';
 import { Offices } from '@/components/sections/offices';
 import { Contact } from '@/components/sections/contact';
+import { AiAssistant } from '@/components/ai-assistant';
 
 export default function Home() {
   return (
