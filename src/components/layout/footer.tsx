@@ -15,9 +15,7 @@ const footerLinks = {
   ],
   support: [
     { href: '#', label: 'Case Studies' },
-    { href: '#', label: 'Partners' },
     { href: '/privacy-policy', label: 'Privacy Policy' },
-    { href: '/refund-policy', label: 'Refund Policy' },
     { href: '/terms-and-conditions', label: 'Terms & Conditions' },
   ],
 };
