@@ -67,13 +67,13 @@ export function MainNav() {
   };
 
   const NavLinksComponent = ({ className }: { className?: string }) => (
-    <nav className={cn('flex items-center gap-6', className)}>
+    <nav className={cn('flex items-center gap-8', className)}>
       {navLinks.map(({ href, label }) => (
         <Link
           key={href}
           href={href}
           onClick={(e) => handleLinkClick(e, href)}
-          className="text-sm font-medium text-black hover:text-primary transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+          className="text-lg font-medium text-white hover:text-soft-orange transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-soft-orange after:transition-all after:duration-300 hover:after:w-full"
         >
           {label}
         </Link>
@@ -85,7 +85,7 @@ export function MainNav() {
     <>
        {isRocketAnimating && <AnimatedRocket onAnimationEnd={handleAnimationEnd} />}
       <div className="hidden md:flex items-center gap-4">
-        <NavLinksComponent className="text-black" />
+        <NavLinksComponent />
         <Button asChild className="group rounded-full font-bold shadow-lg transition-transform hover:scale-105 bg-black text-white hover:bg-black/90 overflow-hidden">
           <Link href="/#contact" onClick={handleLaunchClick} className="relative">
             <span className="transition-transform duration-300 group-hover:-translate-y-8">Get Consultation</span>
