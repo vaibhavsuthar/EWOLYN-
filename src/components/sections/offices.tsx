@@ -4,7 +4,7 @@ import { MapPin } from 'lucide-react';
 import { AnimateOnScroll } from '../animate-on-scroll';
 
 const gujaratOffices = [
-  'B-304/2 Gopal Palace, Near Shiromani Complex, Nehru Nagar, Ahmedabad – 380015',
+  'B-304/2 Gopal Palace, Near Shiromani Complex, opposite Ocean Park, Nehru Nagar, Ahmedabad-380015 Gujarat.',
   'Unicus Shyamal, A-1007, Near Shyamal Cross Road, Ahmedabad – 380015',
   'B-101 Synergy Tower, Near Vodafone House, Corporate Road, Ahmedabad – 380015',
   'F/20, Mahakali Trade Center, Bhagyoday Cross Road, Kadi',
