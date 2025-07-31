@@ -20,7 +20,7 @@ const navLinks = [
 const AnimatedRocket = ({ onAnimationEnd }: { onAnimationEnd: () => void }) => {
   return (
     <div
-      className="fixed top-1/2 left-0 text-5xl z-[100] animate-rocket-fly"
+      className="fixed top-6 right-24 text-6xl z-[100] animate-rocket-fly"
       onAnimationEnd={onAnimationEnd}
     >
       🚀
@@ -135,4 +135,3 @@ export function MainNav() {
     </>
   );
 }
-
