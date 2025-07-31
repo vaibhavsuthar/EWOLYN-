@@ -17,8 +17,21 @@ const navLinks = [
   { href: '/#contact', label: 'Contact' },
 ];
 
+const AnimatedRocket = ({ onAnimationEnd }: { onAnimationEnd: () => void }) => {
+  return (
+    <div
+      className="fixed top-1/2 left-0 text-5xl z-[100] animate-rocket-fly"
+      onAnimationEnd={onAnimationEnd}
+    >
+      🚀
+    </div>
+  );
+};
+
+
 export function MainNav() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isRocketAnimating, setIsRocketAnimating] = useState(false);
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (href.startsWith('/#')) {
@@ -36,6 +49,23 @@ export function MainNav() {
     setIsOpen(false);
   };
 
+  const handleLaunchClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setIsRocketAnimating(true);
+  };
+  
+  const handleAnimationEnd = () => {
+    setIsRocketAnimating(false);
+    const targetElement = document.getElementById('contact');
+    if (targetElement) {
+      const offsetTop = targetElement.offsetTop;
+      window.scrollTo({
+        top: offsetTop - 80,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   const NavLinksComponent = ({ className }: { className?: string }) => (
     <nav className={cn('flex items-center gap-6', className)}>
       {navLinks.map(({ href, label }) => (
@@ -43,7 +73,7 @@ export function MainNav() {
           key={href}
           href={href}
           onClick={(e) => handleLinkClick(e, href)}
-          className="text-sm font-medium text-black hover:text-white transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+          className="text-sm font-medium text-black hover:text-primary transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
         >
           {label}
         </Link>
@@ -53,10 +83,11 @@ export function MainNav() {
 
   return (
     <>
+       {isRocketAnimating && <AnimatedRocket onAnimationEnd={handleAnimationEnd} />}
       <div className="hidden md:flex items-center gap-4">
         <NavLinksComponent />
-        <Button asChild className="group rounded-full font-bold shadow-lg transition-transform hover:scale-105 bg-dark-cyan text-white hover:bg-dark-cyan/90 overflow-hidden">
-          <Link href="/#contact" onClick={(e) => handleLinkClick(e, '/#contact')} className="relative">
+        <Button asChild className="group rounded-full font-bold shadow-lg transition-transform hover:scale-105 bg-dark-cyan text-white hover:bg-dark-cyan/90 overflow-hidden animate-pulse">
+          <Link href="/#contact" onClick={handleLaunchClick} className="relative">
             <span className="transition-transform duration-300 group-hover:-translate-y-8">Get Consultation</span>
             <span className="absolute inset-0 flex items-center justify-center transition-transform duration-300 translate-y-8 group-hover:translate-y-0">
               <Rocket className="mr-2 h-5 w-5" />
@@ -91,7 +122,10 @@ export function MainNav() {
                   </Link>
                 ))}
                 <Button asChild size="lg" className="mt-8 rounded-full font-bold text-lg">
-                  <Link href="/#contact" onClick={(e) => handleLinkClick(e, '/#contact')}>Get Consultation</Link>
+                  <Link href="/#contact" onClick={(e) => {
+                    handleLinkClick(e, '/#contact');
+                    setIsOpen(false);
+                  }}>Get Consultation</Link>
                 </Button>
               </nav>
             </div>
@@ -101,3 +135,4 @@ export function MainNav() {
     </>
   );
 }
+

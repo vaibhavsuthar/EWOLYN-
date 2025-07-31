@@ -58,6 +58,31 @@
   }
 }
 
+@layer utilities {
+  @keyframes rocket-fly {
+    0% {
+      transform: translate(-100px, 0) rotate(-45deg);
+      opacity: 1;
+    }
+    20% {
+       transform: translate(20vw, -20vh) rotate(-45deg);
+       opacity: 1;
+    }
+    80% {
+       transform: translate(80vw, 40vh) rotate(-45deg);
+       opacity: 1;
+    }
+    100% {
+      transform: translate(110vw, 60vh) rotate(-45deg);
+      opacity: 0;
+    }
+  }
+
+  .animate-rocket-fly {
+    animation: rocket-fly 2s ease-in-out forwards;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
