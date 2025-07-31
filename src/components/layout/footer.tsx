@@ -49,10 +49,10 @@ export function Footer() {
     setIsClient(true);
   }, []);
   
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
+  const handleNewsletterSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Temporarily disabled until a backend service is implemented
-    console.log("Newsletter submission for:", newsletterEmail);
+    const mailtoLink = `mailto:info.ewolyn@gmail.com?subject=Newsletter Subscription&body=Please add me to the newsletter list. My email is: ${newsletterEmail}`;
+    window.location.href = mailtoLink;
   };
 
   return (
@@ -108,6 +108,9 @@ export function Footer() {
                 />
                 <Button type="submit" className="bg-primary hover:bg-primary/90 rounded-l-none">Subscribe</Button>
               </form>
+              <p className="text-xs text-gray-500 mt-2">
+                Clicking "Subscribe" will open your default email app to send the subscription request.
+              </p>
             </div>
           </div>
 
