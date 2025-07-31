@@ -16,7 +16,7 @@ const footerLinks = {
   support: [
     { href: '#', label: 'Case Studies' },
     { href: '#', label: 'Partners' },
-    { href: '#', label: 'Privacy Policy' },
+    { href: '/privacy-policy', label: 'Privacy Policy' },
     { href: '#', label: 'Terms & Conditions' },
   ],
 };
