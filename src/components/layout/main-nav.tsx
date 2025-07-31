@@ -4,7 +4,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Rocket } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 
@@ -55,8 +55,14 @@ export function MainNav() {
     <>
       <div className="hidden md:flex items-center gap-4">
         <NavLinksComponent />
-        <Button asChild className="rounded-full font-bold shadow-lg transition-transform hover:scale-105 bg-dark-cyan text-white hover:bg-dark-cyan/90 animate-pulse">
-          <Link href="/#contact" onClick={(e) => handleLinkClick(e, '/#contact')}>Get Consultation</Link>
+        <Button asChild className="group rounded-full font-bold shadow-lg transition-transform hover:scale-105 bg-dark-cyan text-white hover:bg-dark-cyan/90 overflow-hidden">
+          <Link href="/#contact" onClick={(e) => handleLinkClick(e, '/#contact')} className="relative">
+            <span className="transition-transform duration-300 group-hover:-translate-y-8">Get Consultation</span>
+            <span className="absolute inset-0 flex items-center justify-center transition-transform duration-300 translate-y-8 group-hover:translate-y-0">
+              <Rocket className="mr-2 h-5 w-5" />
+              Launch!
+            </span>
+          </Link>
         </Button>
       </div>
       <div className="md:hidden">
