@@ -19,8 +19,9 @@ const navLinks = [
 const AnimatedRocket = ({ onAnimationEnd }: { onAnimationEnd: () => void }) => {
   return (
     <div
-      className="fixed top-6 right-24 text-6xl z-[100] animate-rocket-fly"
+      className="fixed top-0 right-1/2 text-6xl z-[100] animate-rocket-fly"
       onAnimationEnd={onAnimationEnd}
+      style={{ transform: 'rotate(90deg)' }}
     >
       🚀
     </div>
@@ -84,8 +85,8 @@ export function MainNav() {
     <>
        {isRocketAnimating && <AnimatedRocket onAnimationEnd={handleAnimationEnd} />}
       <div className="hidden md:flex items-center gap-4">
-        <NavLinksComponent />
-        <Button asChild className="group rounded-full font-bold shadow-lg transition-transform hover:scale-105 bg-dark-cyan text-white hover:bg-dark-cyan/90 overflow-hidden animate-pulse">
+        <NavLinksComponent className="text-black" />
+        <Button asChild className="group rounded-full font-bold shadow-lg transition-transform hover:scale-105 bg-black text-white hover:bg-black/90 overflow-hidden">
           <Link href="/#contact" onClick={handleLaunchClick} className="relative">
             <span className="transition-transform duration-300 group-hover:-translate-y-8">Get Consultation</span>
             <span className="absolute inset-0 flex items-center justify-center transition-transform duration-300 translate-y-8 group-hover:translate-y-0">
