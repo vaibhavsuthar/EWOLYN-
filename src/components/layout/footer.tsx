@@ -51,11 +51,8 @@ export function Footer() {
   
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (newsletterEmail) {
-      const subject = "Newsletter Subscription Request";
-      const body = `Please add me to the newsletter. My email is ${newsletterEmail}`;
-      window.location.href = `mailto:info.ewolyn@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    }
+    // Temporarily disabled until a backend service is implemented
+    console.log("Newsletter submission for:", newsletterEmail);
   };
 
   return (
