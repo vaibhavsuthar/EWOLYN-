@@ -15,9 +15,11 @@ const cardColors = [
   'bg-white',
   'bg-indian-green',
   'bg-white',
+  'bg-white',
 ];
 
 const textColors = [
+  'text-black',
   'text-black',
   'text-black',
   'text-black',
