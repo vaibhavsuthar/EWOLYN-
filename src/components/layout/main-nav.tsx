@@ -52,6 +52,16 @@ export function MainNav() {
   const handleLaunchClick = (e: React.MouseEvent) => {
     e.preventDefault();
     setIsRocketAnimating(true);
+    const targetElement = document.getElementById('contact');
+    if (targetElement) {
+      setTimeout(() => {
+        const offsetTop = targetElement.offsetTop;
+        window.scrollTo({
+          top: offsetTop - 80,
+          behavior: 'smooth',
+        });
+      }, 2000); // Corresponds to animation duration
+    }
   };
   
   const handleAnimationEnd = () => {
@@ -74,7 +84,7 @@ export function MainNav() {
           href={href}
           onClick={(e) => handleLinkClick(e, href)}
           className="text-lg font-medium hover:text-soft-orange transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-soft-orange after:transition-all after:duration-300 hover:after:w-full"
-          style={{ color: '#0D1320' }}
+          style={{ color: '#FFD447' }}
         >
           {label}
         </Link>
