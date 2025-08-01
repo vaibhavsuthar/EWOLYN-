@@ -138,7 +138,11 @@ export function AiAssistant() {
                         : "bg-muted"
                     )}
                   >
-                    {message.content}
+                    {message.content.includes("info.ewolyn@gmail.com") ? (
+                      <span>
+                        📞 Or call us directly at +91 77779 41611 or 📧 email: <a href="mailto:info.ewolyn@gmail.com" className="underline">info.ewolyn@gmail.com</a>
+                      </span>
+                    ) : message.content}
                   </div>
                   {message.role === "user" && (
                      <Avatar className="h-8 w-8">
