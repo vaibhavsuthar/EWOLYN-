@@ -14,7 +14,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { MessageSquare, Send, Bot, User, Loader2 } from "lucide-react";
-import { startupQueryTool } from "@/ai/flows/startup-query-tool";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { cn } from "@/lib/utils";
 
@@ -38,7 +37,6 @@ export function AiAssistant() {
   const [isLoading, setIsLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
-  const isInitialMount = useRef(true);
 
   useEffect(() => {
     if (isOpen) {
@@ -81,27 +79,18 @@ export function AiAssistant() {
 
     const userMessage: Message = { role: "user", content: input };
     setMessages((prev) => [...prev, userMessage]);
-    const currentInput = input;
     setInput("");
     setIsLoading(true);
 
-    try {
-      const result = await startupQueryTool({ query: currentInput });
+    // Simulate a delay for a more natural feel
+    setTimeout(() => {
       const assistantMessage: Message = {
         role: "assistant",
-        content: result.answer,
+        content: "Thank you for your message! An Ewolyn advisor will get back to you shortly. For immediate assistance, please call us at +91 77779 41611.",
       };
       setMessages((prev) => [...prev, assistantMessage]);
-    } catch (error) {
-      console.error("AI query failed:", error);
-      const errorMessage: Message = {
-        role: "assistant",
-        content: "Sorry, I couldn't process your request. Please try again.",
-      };
-      setMessages((prev) => [...prev, errorMessage]);
-    } finally {
       setIsLoading(false);
-    }
+    }, 1000);
   };
 
   return (
