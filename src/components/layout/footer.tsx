@@ -4,7 +4,6 @@
 import Link from 'next/link';
 import { ArrowUp, Phone, CalendarPlus, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { useEffect, useState } from 'react';
 import { EwolynLogo } from '../ewolyn-logo';
 
@@ -42,15 +41,14 @@ const ScrollToTopButton = () => {
 
 export function Footer() {
   const [isClient, setIsClient] = useState(false);
-  const [newsletterEmail, setNewsletterEmail] = useState('');
 
   useEffect(() => {
     setIsClient(true);
   }, []);
   
-  const handleNewsletterSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleNewsletterSubmit = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    const mailtoLink = `mailto:info.ewolyn@gmail.com?subject=Newsletter Subscription&body=Please add me to the newsletter list. My email is: ${newsletterEmail}`;
+    const mailtoLink = `mailto:info.ewolyn@gmail.com?subject=Newsletter Subscription&body=Please add me to the newsletter list.`;
     window.location.href = mailtoLink;
   };
 
@@ -108,18 +106,12 @@ export function Footer() {
             {/* Right Section - Newsletter */}
             <div className="md:col-span-4">
               <h3 className="font-semibold text-lg mb-4">Newsletter</h3>
-              <p className="text-gray-400 mb-4">Enter your email to get the latest updates from Ewolyn.</p>
-              <form className="flex" onSubmit={handleNewsletterSubmit}>
-                <Input
-                  type="email"
-                  placeholder="Your email address"
-                  className="bg-gray-800 border-gray-700 text-white rounded-r-none flex-grow"
-                  value={newsletterEmail}
-                  onChange={(e) => setNewsletterEmail(e.target.value)}
-                  required
-                />
-                <Button type="submit" className="bg-primary hover:bg-primary/90 rounded-l-none">Subscribe</Button>
-              </form>
+              <p className="text-gray-400 mb-4">Click to get the latest updates from Ewolyn.</p>
+              <Button asChild className="bg-primary hover:bg-primary/90">
+                  <a href="mailto:info.ewolyn@gmail.com?subject=Newsletter Subscription&body=Please add me to the newsletter list." onClick={handleNewsletterSubmit}>
+                    Subscribe
+                  </a>
+              </Button>
             </div>
           </div>
 
