@@ -140,7 +140,7 @@ export function AiAssistant() {
                   >
                     {message.content.includes("info.ewolyn@gmail.com") ? (
                       <span>
-                        📞 Or call us directly at +91 77779 41611 or 📧 email: <a href="mailto:info.ewolyn@gmail.com" className="underline">info.ewolyn@gmail.com</a>
+                        📞 Or call us directly at +91 77779 41611 or 📧 email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info.ewolyn@gmail.com" target="_blank" rel="noopener noreferrer" className="underline">info.ewolyn@gmail.com</a>
                       </span>
                     ) : message.content}
                   </div>

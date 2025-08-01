@@ -25,7 +25,9 @@ export function Contact() {
               <span>Call us: +91 77779 41611</span>
             </a>
             <a
-              href="mailto:info.ewolyn@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=info.ewolyn@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
             >
               <Mail className="w-5 h-5 text-accent" />

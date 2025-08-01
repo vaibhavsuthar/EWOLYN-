@@ -46,12 +46,6 @@ export function Footer() {
     setIsClient(true);
   }, []);
   
-  const handleNewsletterSubmit = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const mailtoLink = `mailto:info.ewolyn@gmail.com?subject=Newsletter Subscription&body=Please add me to the newsletter list.`;
-    window.location.href = mailtoLink;
-  };
-
   if (!isClient) {
     return null;
   }
@@ -108,7 +102,7 @@ export function Footer() {
               <h3 className="font-semibold text-lg mb-4">Newsletter</h3>
               <p className="text-gray-400 mb-4">Click to get the latest updates from Ewolyn.</p>
               <Button asChild className="bg-primary hover:bg-primary/90">
-                  <a href="mailto:info.ewolyn@gmail.com?subject=Newsletter Subscription&body=Please add me to the newsletter list.">
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info.ewolyn@gmail.com&su=Newsletter Subscription&body=Please add me to the newsletter list." target="_blank" rel="noopener noreferrer">
                     Subscribe
                   </a>
               </Button>

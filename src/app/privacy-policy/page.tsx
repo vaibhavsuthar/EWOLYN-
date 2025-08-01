@@ -61,7 +61,9 @@ export default function PrivacyPolicy() {
             <p>
               By using our website, you agree to this Privacy Policy. You can withdraw your consent anytime by contacting us at{' '}
               <a
-                href="mailto:info.ewolyn@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=info.ewolyn@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-primary hover:underline"
               >
                 info.ewolyn@gmail.com
@@ -104,7 +106,9 @@ export default function PrivacyPolicy() {
               <p>
                 📧{' '}
                 <a
-                  href="mailto:info.ewolyn@gmail.com"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=info.ewolyn@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-primary hover:underline"
                 >
                   info.ewolyn@gmail.com

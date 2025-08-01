@@ -39,7 +39,7 @@ export default function TermsAndConditions() {
           </ul>
           <p>
             Data processing is based on your consent, which you can withdraw at any time by contacting{' '}
-            <a href="mailto:info.ewolyn@gmail.com" className="text-primary hover:underline">info.ewolyn@gmail.com</a>.
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info.ewolyn@gmail.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">info.ewolyn@gmail.com</a>.
           </p>
 
           <h3 className="font-bold text-xl mb-2 mt-6">5. Cookies Policy</h3>
@@ -91,13 +91,13 @@ export default function TermsAndConditions() {
           <h3 className="font-bold text-xl mb-2 mt-6">10. Payments</h3>
           <p>
             All payments must be made only in the name of <strong>EWOLYN SERVICES PVT. LTD.</strong> as listed on our official platforms. We do not accept payments to personal accounts. Any misrepresentation should be reported to{' '}
-            <a href="mailto:info.ewolyn@gmail.com" className="text-primary hover:underline">info.ewolyn@gmail.com</a> immediately.
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info.ewolyn@gmail.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">info.ewolyn@gmail.com</a> immediately.
           </p>
 
           <h3 className="font-bold text-xl mb-2 mt-6">11. Grievance Resolution</h3>
           <p>
             For service-related concerns, clients may email the following details to{' '}
-            <a href="mailto:info.ewolyn@gmail.com" className="text-primary hover:underline">info.ewolyn@gmail.com</a>:
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info.ewolyn@gmail.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">info.ewolyn@gmail.com</a>:
           </p>
           <ul className="list-disc pl-6 space-y-2 my-4">
             <li>Company Name</li>
