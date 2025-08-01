@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useRef, useEffect } from "react";
@@ -12,9 +13,9 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { MessageSquare, Send, Bot, User, Loader2, X } from "lucide-react";
+import { MessageSquare, Send, Bot, User, Loader2 } from "lucide-react";
 import { startupQueryTool } from "@/ai/flows/startup-query-tool";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { cn } from "@/lib/utils";
 
 interface Message {
@@ -22,12 +23,48 @@ interface Message {
   content: string;
 }
 
+const initialBotMessages = [
+  "👋 Welcome to EWOLYN SERVICES!",
+  "🚀 We offer end-to-end support for Startup Registration, Tax Exemptions, Digital Marketing, Govt. Schemes & Specialized Funding.",
+  "🎯 Looking for services like Private Limited Company Registration, ISO Certification, or Udyam Certificate?",
+  "💬 Just type your query below, and one of our advisors will guide you!",
+  "📞 Or call us directly at +91 77779 41611 or 📧 email: info.ewolyn@gmail.com"
+];
+
+
 export function AiAssistant() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
+  const isInitialMount = useRef(true);
+
+  useEffect(() => {
+    if (isOpen) {
+      // Clear messages and show initial bot messages when dialog opens
+      setMessages([]);
+      let currentMessageIndex = 0;
+      
+      const displayNextMessage = () => {
+        if (currentMessageIndex < initialBotMessages.length) {
+          const nextMessage: Message = {
+            role: "assistant",
+            content: initialBotMessages[currentMessageIndex],
+          };
+          setMessages((prev) => [...prev, nextMessage]);
+          currentMessageIndex++;
+          setTimeout(displayNextMessage, 1500); // 1.5 second delay between messages
+        }
+      };
+      
+      // Start displaying messages
+      const timer = setTimeout(displayNextMessage, 500);
+
+      // Cleanup timeout on component unmount or if dialog closes
+      return () => clearTimeout(timer);
+    }
+  }, [isOpen]);
 
   useEffect(() => {
     if (scrollAreaRef.current) {
