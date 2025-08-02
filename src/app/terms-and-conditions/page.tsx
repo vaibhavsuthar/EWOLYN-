@@ -3,7 +3,7 @@ import { Section, SectionTitle } from '@/components/ui/section';
 
 export default function TermsAndConditions() {
   return (
-    <main className="bg-light-gray pt-24">
+    <main className="bg-background pt-24">
       <Section id="terms-and-conditions" className="py-12 md:py-16">
         <SectionTitle>Terms &amp; Conditions</SectionTitle>
         <div className="max-w-4xl mx-auto mt-12 prose prose-lg lg:prose-xl text-foreground">
